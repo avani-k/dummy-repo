@@ -4,3 +4,4 @@ workflows:
      primaryDescriptorPath: /HelloWorld.wdl
      testParameterFiles:
          - /hello.json
+     name: testing-hello-world
