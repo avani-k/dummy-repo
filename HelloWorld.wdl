@@ -1,21 +1,27 @@
-version 1.0
+# Code from:https://github.com/broadinstitute/cromwell-tools/blob/master/docs/Tutorials/Quickstart/Examples/helloworld.wdl
 
-workflow hello_world {
-   call hello
-   output { File helloFile = hello.outFile }
-}
+task HWTask {
 
-task hello {
-    input {
-    File myName
-    }
-    #define command to execute when this task runs
-    command {
-        echo Hello World! > Hello.txt
-        cat ${myName} >> Hello.txt
-    }
+  String hello_input
+  String version = "hello_world_v1.0.0"
+  String python_environment
 
-    output {
-        File outFile = "Hello.txt"
-    }
+
+  command {
+    echo ${hello_input}
+
+    python -u<<CODE
+
+    chars = """Hello World!"""
+    print(chars)
+
+    import sys
+    print(sys.version)
+
+    CODE
+  }
+
+  runtime {
+    docker: (if python_environment == "python3" then "python:3.6" else "python:2.7") + "-slim"
+  }
 }
