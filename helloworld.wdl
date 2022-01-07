@@ -21,10 +21,7 @@ task HWTask {
     CODE
   }
   
-  workflow HelloWorld {
-  input{
-    String python_environment
-    }
+  workflow helloworld {
   
   meta {
     description: "Hello World workflow."
