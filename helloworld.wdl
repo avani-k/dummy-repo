@@ -22,7 +22,9 @@ task HWTask {
   }
   
   workflow HelloWorld {
-  String python_environment
+  input{
+    String python_environment
+    }
   
   meta {
     description: "Hello World workflow."
