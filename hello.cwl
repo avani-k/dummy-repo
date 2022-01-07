@@ -10,7 +10,7 @@
 ###############################################################################################
 
 
-cwlVersion: v1.1
+cwl Version: v1.1
 class: CommandLineTool
 
 baseCommand: ["bash", "hello.sh"]
