@@ -9,7 +9,7 @@
 #launch with cromwell (for future reference only):
 #   java -jar <path to cromwell jar>/cromwell-44.jar run HelloWorld.wdl --inputs hello.json
 ###############################################################################################
-#push for GitHub apps
+# random push for GitHub apps
 version 1.0
 
 #add and name a workflow block
