@@ -16,6 +16,10 @@ version 1.0
 workflow hello_world {
    call hello
    output { File helloFile = hello.outFile }
+   meta {
+		author: "Avani Khadilkar"
+		email: "akhadilk@ucsc.edu"
+	}
 }
 #define the 'hello' task
 task hello {
