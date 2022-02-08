@@ -1,3 +1,5 @@
+version 1.0
+
 ##############################################################################################
 #Exercise1: Run HelloWorld.wdl locally with DockstoreCLI:
 # first move to directory:
@@ -10,7 +12,6 @@
 #   java -jar <path to cromwell jar>/cromwell-44.jar run HelloWorld.wdl --inputs hello.json
 ###############################################################################################
 # random push for GitHub apps
-version 1.0
 
 #add and name a workflow block
 workflow hello_world {
